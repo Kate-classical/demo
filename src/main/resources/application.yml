@@ -1,0 +1,11 @@
+spring:
+  application.name: alfa-leasing-mail-send-api
+  profiles.active: local
+
+---
+spring:
+  profiles: local, dev, test, stage, prod
+
+server:
+  port: 4444
+  servlet.context-path: /alfa-leasing-mail-send-api

@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  alfa-leasing-mail-send-api:
+    image: vilchyk/alfa-leasing-mail-send-api:latest
+    container_name: "alfa-leasing-mail-send-api"
+    environment:
+     - TZ=Europe/Moscow
+    ports:
+      - 4444:4444

@@ -1,0 +1,3 @@
+include:
+  - project: 'cabinet/common-ci'
+    file: '.gitlab-ci.yml'
