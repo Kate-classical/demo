@@ -28,13 +28,14 @@ public class MailController {
     public ResponseEntity<byte[]> getTest(@RequestParam String template,
                                           @RequestParam String phone,
                                           @RequestParam String inn) {
-        log.info("GET test22 with picture template={}, phone={}, inn={}", template, phone, inn);
-
-        // пишем в БД
+        log.info("!!! GET test22 with picture template={}, phone={}, inn={}", template, phone, inn);
+        System.out.println("!!! GET test22");
 
         URL imageUrl;
         try {
-            imageUrl = new URL("https://www.google.com/images/srpr/logo11w.png");
+            imageUrl = new URL("http://www.401khelpcenter.com/syndicate/img/AF-Logo_Brown_Small.gif");
+            //imageUrl = new URL("https://www.w3schools.com/images/picture.jpg");
+            //imageUrl = new URL("https://www.google.com/images/srpr/logo11w.png");
         } catch (MalformedURLException ex) {
             throw new RuntimeException(ex);
         }
@@ -56,8 +57,9 @@ public class MailController {
     public ResponseEntity<?> getTest22(@RequestParam String template,
                                        @RequestParam String phone,
                                        @RequestParam String inn) {
-        log.info("GET test template=}, phone={}, inn={}", template, phone, inn);
-        // пишем в БД
+        log.info("!!! GET test template={}, phone={}, inn={}", template, phone, inn);
+        System.out.println("!!! GET test");
+
         return ResponseEntity.ok().build();
     }
 }
